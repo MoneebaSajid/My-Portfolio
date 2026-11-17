@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Moneeba Sajid | ATS Resume and CV Writer</title>
+<meta name="description" content="ATS-friendly resumes, cover letters and LinkedIn profiles for fresh graduates and tech jobseekers. See before and after samples.">
+<meta name="theme-color" content="#1F3A5F">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%2314767B'/%3E%3Cpath d='M16 46V18h6l10 16 10-16h6v28h-6V28L32 44 22 28v18z' fill='%23fff'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F4F7FA; --ink:#16263F; --navy:#1F3A5F; --teal:#14767B;
+  --muted:#4D5B6B; --line:#D3DAE3; --mark:#FFE58A;
+  --display:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;
+  --text:"Source Serif 4",Georgia,"Times New Roman",serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--text);font-size:1.125rem;line-height:1.65;-webkit-font-smoothing:antialiased}
+::selection{background:var(--mark)}
+a{color:var(--teal)}
+a:focus-visible,summary:focus-visible,input:focus-visible{outline:3px solid var(--teal);outline-offset:3px}
+img{max-width:100%}
+.wrap{width:min(1120px,calc(100% - 2rem));margin-inline:auto}
+
+/* top bar */
+.top{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:1.1rem 0}
+.brand{font-family:var(--display);font-weight:700;font-size:1.1rem;color:var(--navy);text-decoration:none}
+.top nav{display:flex;gap:1.5rem;align-items:center}
+.top nav a:not(.btn){color:var(--muted);text-decoration:none;font-family:var(--display);font-size:.95rem}
+.top nav a:not(.btn):hover{color:var(--navy);text-decoration:underline}
+
+/* buttons */
+.btn{display:inline-block;background:var(--teal);color:#fff;border:2px solid var(--teal);border-radius:6px;padding:.65rem 1.2rem;font-family:var(--display);font-weight:600;font-size:1rem;line-height:1.3;text-decoration:none}
+.btn:hover{background:var(--navy);border-color:var(--navy)}
+.btn.quiet{background:transparent;color:var(--navy);border-color:var(--navy)}
+.btn.quiet:hover{background:var(--navy);color:#fff}
+.btn.light{background:#fff;color:var(--navy);border-color:#fff}
+.btn.light:hover{background:var(--mark);border-color:var(--mark);color:var(--ink)}
+
+/* hero */
+.hero{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(2rem,5vw,4.5rem);align-items:start;padding:clamp(1.5rem,4vw,3.5rem) 0 clamp(3rem,6vw,5rem)}
+h1{margin:0 0 1.2rem;max-width:17ch;font-family:var(--display);font-weight:800;font-size:clamp(2.3rem,4.6vw,3.7rem);line-height:1.04;letter-spacing:-.025em;color:var(--navy)}
+.lede{max-width:34rem;margin:0}
+.actions{display:flex;flex-wrap:wrap;align-items:center;gap:1rem;margin-top:1.7rem}
+.fine{margin:1.2rem 0 0;max-width:34rem;color:var(--muted);font-size:.95rem}
+
+/* before / after compare */
+.compare{position:relative;aspect-ratio:1075/1090;overflow:hidden;background:#fff;border:1px solid var(--line);border-radius:4px;cursor:ew-resize;touch-action:pan-y;--pos:50%}
+.compare img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top;user-select:none;-webkit-user-drag:none}
+.layer-before{position:absolute;inset:0;clip-path:inset(0 calc(100% - var(--pos)) 0 0)}
+.handle{position:absolute;top:0;bottom:0;left:var(--pos);width:3px;margin-left:-1.5px;background:var(--teal);pointer-events:none}
+.handle::after{content:"\2194";position:absolute;top:50%;left:50%;display:grid;place-items:center;width:36px;height:36px;margin:-18px 0 0 -18px;border-radius:50%;background:var(--teal);color:#fff;font:600 18px/1 var(--display)}
+.tag{position:absolute;top:10px;padding:.1rem .65rem;border-radius:4px;font-family:var(--display);font-size:.85rem;font-weight:600}
+.tag.b{left:10px;background:var(--mark);color:var(--ink)}
+.tag.a{right:10px;background:var(--navy);color:#fff}
+.range{display:block;width:100%;margin:.9rem 0 0;accent-color:var(--teal)}
+.changes{display:grid;gap:.75rem;margin:1.1rem 0 0;padding:0;list-style:none;font-size:1rem}
+.changes li{padding-left:.85rem;border-left:4px solid var(--mark)}
+
+/* sections */
+section{padding:clamp(2.5rem,6vw,4.5rem) 0;border-top:1px solid var(--line)}
+h2{margin:0 0 .8rem;font-family:var(--display);font-weight:700;font-size:clamp(1.6rem,3vw,2.2rem);line-height:1.15;letter-spacing:-.015em;color:var(--navy)}
+.intro{max-width:38rem;margin:0 0 2rem;color:var(--muted)}
+
+/* packages table */
+table{width:100%;border-collapse:collapse;font-size:1rem}
+th,td{padding:1rem .8rem 1rem 0;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+thead th{padding-top:0;font-family:var(--display);font-size:.9rem;font-weight:500;color:var(--muted)}
+tbody th{width:27%;font-family:var(--display);font-weight:600;color:var(--navy)}
+td.price{width:9rem;font-family:var(--display);font-size:1.3rem;font-weight:700;color:var(--navy);white-space:nowrap}
+.note{margin:1rem 0 0;color:var(--muted);font-size:.95rem}
+
+/* samples */
+.samples{display:grid;grid-template-columns:repeat(6,1fr);gap:1.8rem 1.4rem}
+.sample{grid-column:span 2;margin:0}
+.sample.wide{grid-column:span 3}
+.sample img{display:block;width:100%;height:auto;background:#fff;border:1px solid var(--line);object-fit:cover;object-position:top}
+.sample.tall img{aspect-ratio:3/4}
+.sample.wide img{aspect-ratio:5/4}
+.sample figcaption{margin-top:.65rem;font-size:1rem;line-height:1.45}
+.sample strong{display:block;font-family:var(--display);font-weight:600;color:var(--navy)}
+.sample span{color:var(--muted);font-size:.95rem}
+.sample a{display:inline-block;margin-top:.15rem;font-size:.95rem}
+
+/* process */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;margin:0;padding:0;list-style:none;counter-reset:s}
+.steps li{counter-increment:s;padding-top:.8rem;border-top:3px solid var(--navy);font-size:1rem}
+.steps li::before{content:counter(s);display:block;font-family:var(--display);font-size:1.6rem;font-weight:700;line-height:1.3;color:var(--teal)}
+
+/* about + faq */
+.prose{max-width:40rem}
+.prose p{margin:0 0 1rem}
+details{padding:1rem 0;border-bottom:1px solid var(--line)}
+details:first-of-type{border-top:1px solid var(--line)}
+summary{display:flex;justify-content:space-between;gap:1rem;cursor:pointer;list-style:none;font-family:var(--display);font-weight:600;color:var(--navy)}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:1.4rem;line-height:1;color:var(--teal)}
+details[open] summary::after{content:"\2212"}
+details p{max-width:40rem;margin:.7rem 0 0}
+.faq{max-width:46rem}
+
+/* closing */
+.closing{background:var(--navy);color:#fff;border-top:0}
+.closing h2{color:#fff}
+.closing p{max-width:36rem;margin:0 0 1.5rem}
+.closing a:focus-visible{outline-color:#fff}
+.legal{margin-top:2.5rem;color:#C8D3E0;font-size:.9rem}
+
+@media (max-width:900px){
+  .hero{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr 1fr}
+}
+@media (max-width:760px){
+  .samples{grid-template-columns:1fr 1fr}
+  .sample,.sample.wide{grid-column:span 1}
+}
+@media (max-width:640px){
+  .top nav a:not(.btn){display:none}
+  thead{position:absolute;left:-9999px}
+  tr{display:block;padding:1rem 0;border-bottom:1px solid var(--line)}
+  th,td,tbody th,td.price{display:block;width:auto;padding:.1rem 0;border:0}
+}
+@media (max-width:520px){
+  .samples,.steps{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <div class="top">
+    <a class="brand" href="#top">Moneeba Sajid</a>
+    <nav aria-label="Main">
+      <a href="#samples">Samples</a>
+      <a href="#packages">Packages</a>
+      <a href="#faq">Questions</a>
+      <a class="btn" data-fiverr href="https://www.fiverr.com/" target="_blank" rel="noopener">Order on Fiverr</a>
+    </nav>
+  </div>
+
+  <main id="top">
+    <div class="hero">
+      <div>
+        <h1>Your resume, rewritten to be clear, specific and ATS-friendly.</h1>
+        <p class="lede">I'm Moneeba Sajid, a software engineer (BS, GCUF) with the Certified Ethical Hacker (CEH) certification. I write resumes, cover letters and LinkedIn profiles for fresh graduates and tech jobseekers.</p>
+        <div class="actions">
+          <a class="btn" data-fiverr href="https://www.fiverr.com/" target="_blank" rel="noopener">Order on Fiverr</a>
+          <a class="btn quiet" href="#samples">Browse samples</a>
+        </div>
+        <p class="fine">Based in Pakistan. Orders and payments go through Fiverr.</p>
+      </div>
+
+      <div>
+        <div class="compare" id="compare">
+          <img src="assets/01_Software_Engineer_Resume_Sample.png" width="1075" height="1521" alt="Sample resume after the rewrite: a one-page layout with a summary, grouped skills and project achievements.">
+          <div class="layer-before">
+            <img src="assets/00_BEFORE_Weak_Resume.png" width="1075" height="1521" alt="Sample resume before the rewrite: plain text with a generic objective and short, vague entries.">
+            <span class="tag b">Before</span>
+          </div>
+          <span class="tag a">After</span>
+          <div class="handle" aria-hidden="true"></div>
+        </div>
+        <label class="range-label" for="pos" style="position:absolute;left:-9999px">Slide to compare the resume before and after</label>
+        <input class="range" id="pos" type="range" min="0" max="100" value="50">
+        <ul class="changes">
+          <li>A vague objective becomes a short summary with real skills and a target role.</li>
+          <li>Skills are grouped by type and use the tool names employers search for.</li>
+          <li>Each project says what was built, with what, and what it did.</li>
+          <li>One page, one column and standard headings, so software can read it.</li>
+        </ul>
+      </div>
+    </div>
+
+    <section id="samples">
+      <h2>Sample resumes and documents</h2>
+      <p class="intro">These samples show fictional people. They show the style and structure you can expect.</p>
+      <div class="samples">
+        <figure class="sample tall">
+          <img src="assets/01_Software_Engineer_Resume_Sample.png" width="1075" height="1521" loading="lazy" alt="Sample software engineer resume">
+          <figcaption><strong>Software engineer resume</strong><span>Fresh graduate, React and Node.js</span><br><a href="assets/01_Software_Engineer_Resume_Sample.pdf" target="_blank" rel="noopener">Open PDF</a></figcaption>
+        </figure>
+        <figure class="sample tall">
+          <img src="assets/02_IT_Cybersecurity_Resume_Sample.png" width="1075" height="1521" loading="lazy" alt="Sample IT and cybersecurity resume">
+          <figcaption><strong>IT and cybersecurity resume</strong><span>Entry level, labs and tools</span><br><a href="assets/02_IT_Cybersecurity_Resume_Sample.pdf" target="_blank" rel="noopener">Open PDF</a></figcaption>
+        </figure>
+        <figure class="sample tall">
+          <img src="assets/03_Business_Graduate_Resume_Sample.png" width="1075" height="1521" loading="lazy" alt="Sample business graduate resume">
+          <figcaption><strong>Business graduate resume</strong><span>Internships and analysis skills</span><br><a href="assets/03_Business_Graduate_Resume_Sample.pdf" target="_blank" rel="noopener">Open PDF</a></figcaption>
+        </figure>
+        <figure class="sample wide">
+          <img src="assets/04_Cover_Letter_Sample.png" width="1075" height="1521" loading="lazy" alt="Sample cover letter">
+          <figcaption><strong>Cover letter</strong><span>Written for one specific job ad</span><br><a href="assets/04_Cover_Letter_Sample.pdf" target="_blank" rel="noopener">Open PDF</a></figcaption>
+        </figure>
+        <figure class="sample wide">
+          <img src="assets/05_LinkedIn_Optimization_Sample.png" width="1075" height="1521" loading="lazy" alt="Sample LinkedIn headline and About section, before and after">
+          <figcaption><strong>LinkedIn headline and About section</strong><span>Before and after</span><br><a href="assets/05_LinkedIn_Optimization_Sample.pdf" target="_blank" rel="noopener">Open PDF</a></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="packages">
+      <h2>Packages</h2>
+      <p class="intro">Starting prices. Each Fiverr gig page shows the final price, delivery time and number of revisions.</p>
+      <table>
+        <thead>
+          <tr><th scope="col">Package</th><th scope="col">What you get</th><th scope="col">From</th></tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">Resume</th><td>One-page ATS-friendly resume, delivered as PDF and Word</td><td class="price">$15</td></tr>
+          <tr><th scope="row">Resume and cover letter</th><td>The resume above plus a cover letter written for one job</td><td class="price">$25</td></tr>
+          <tr><th scope="row">Full set</th><td>Resume, cover letter, and a LinkedIn headline and About section</td><td class="price">$45</td></tr>
+        </tbody>
+      </table>
+      <p class="note">Prices are in US dollars and may change as I complete more orders.</p>
+    </section>
+
+    <section id="process">
+      <h2>How an order works</h2>
+      <ol class="steps">
+        <li>Order on Fiverr and send your current CV (if you have one), your target job, and your projects.</li>
+        <li>I write your draft using keywords from the job ad.</li>
+        <li>You read the draft and ask for changes.</li>
+        <li>You receive the final PDF and Word files.</li>
+      </ol>
+    </section>
+
+    <section id="about">
+      <h2>About me</h2>
+      <div class="prose">
+        <p>I'm a Software Engineering graduate of Government College University Faisalabad (BS, 2026) and I hold the Certified Ethical Hacker (CEH) certification.</p>
+        <p>I've been through the application process for software house roles myself, and I've helped fellow graduates with their CVs and cover letters. I write for two readers: a recruiter going through a pile of applications, and the software that sorts them first.</p>
+        <p>I work best with fresh graduates and entry-level tech, IT and cybersecurity jobseekers. I also write for non-technical graduates.</p>
+      </div>
+    </section>
+
+    <section id="faq">
+      <h2>Questions</h2>
+      <div class="faq">
+        <details>
+          <summary>Will my resume pass ATS software?</summary>
+          <p>I use a one-column layout, standard headings and keywords from your target job, which is what ATS software reads best. No one can promise interviews or hiring decisions.</p>
+        </details>
+        <details>
+          <summary>Do you use AI?</summary>
+          <p>I use tools for grammar and keyword checks. Your resume is built from your own details, and I read and fact-check every line before I deliver it.</p>
+        </details>
+        <details>
+          <summary>What do I need to send?</summary>
+          <p>Your current CV if you have one, the job title or ad you're aiming for, your education, projects, skills and any certifications.</p>
+        </details>
+        <details>
+          <summary>Will you add experience I don't have?</summary>
+          <p>No. Everything in your resume comes from what you tell me, and I'll ask if something is unclear.</p>
+        </details>
+        <details>
+          <summary>Can you write for fields outside tech?</summary>
+          <p>Yes. The business graduate sample above shows a non-technical resume.</p>
+        </details>
+        <details>
+          <summary>Can I ask for changes?</summary>
+          <p>Yes. Each package includes revisions. The number is shown on the gig page.</p>
+        </details>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<section class="closing">
+  <div class="wrap">
+        <h2>Ready for a clearer resume?</h2>
+        <p>Order on Fiverr and send your details. I'll start with a draft.</p>
+        <a class="btn light" data-fiverr href="https://www.fiverr.com/" target="_blank" rel="noopener">Order on Fiverr</a>
+        <p class="legal">Sample documents show fictional people. Client work stays private.</p>
+  </div>
+</section>
+
+<script>
+(function () {
+  // Edit this one line: your Fiverr profile or gig link.
+  var FIVERR_URL = "https://www.fiverr.com/YOUR_USERNAME";
+
+  document.querySelectorAll("[data-fiverr]").forEach(function (a) { a.href = FIVERR_URL; });
+
+  var box = document.getElementById("compare");
+  var range = document.getElementById("pos");
+  var raf = 0;
+  function set(v) {
+    v = Math.max(0, Math.min(100, v));
+    box.style.setProperty("--pos", v + "%");
+    range.value = v;
+  }
+  function stop() { cancelAnimationFrame(raf); }
+  function fromEvent(e) {
+    var r = box.getBoundingClientRect();
+    set((e.clientX - r.left) / r.width * 100);
+  }
+  var dragging = false;
+  box.addEventListener("pointerdown", function (e) { stop(); dragging = true; box.setPointerCapture(e.pointerId); fromEvent(e); });
+  box.addEventListener("pointermove", function (e) { if (dragging) fromEvent(e); });
+  function end() { dragging = false; }
+  box.addEventListener("pointerup", end);
+  box.addEventListener("pointercancel", end);
+  range.addEventListener("input", function () { stop(); set(+range.value); });
+
+  // One opening moment: the page sweeps from "before" to the middle, once.
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (!reduce) {
+    set(100);
+    setTimeout(function () {
+      var start = null, dur = 1600;
+      function step(t) {
+        if (start === null) start = t;
+        var p = Math.min(1, (t - start) / dur);
+        var eased = 1 - Math.pow(1 - p, 3);
+        set(100 - 50 * eased);
+        if (p < 1) raf = requestAnimationFrame(step);
+      }
+      raf = requestAnimationFrame(step);
+    }, 500);
+  }
+})();
+</script>
+</body>
+</html>
